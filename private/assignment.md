@@ -33,10 +33,10 @@ Design and implement a program (in python) that simulates some of the job schedu
 - When a job terminates, do job scheduling first, then process scheduling. 
 - Also, give preference to first level jobs (i.e., *if a job from the second level of the ready queue is running, and a new job enters the first level, the running job is preempted to the second level in favor of the first level job*).
 
-## IO Interrupts
+### IO Interrupts
 - While executing on the CPU, a job may require I/O, which preempts it to the `I/O wait queue` for the duration of its I/O burst.
 
-## Critical Section
+### Critical Section
 - While executing on the CPU, a job may perform a semaphore operation. 
 - Assume there are five semaphores shared among all jobs running in the system, numbered 0 through 4, each initialized to 1. 
 - If a job must wait because of a semaphore, it goes onto the appropriate wait queue until it is signaled. 
@@ -44,7 +44,7 @@ Design and implement a program (in python) that simulates some of the job schedu
 
 - When a job completes, put it on a finished list for later processing.
 
-## Instructions / Events
+### Instructions / Events
 - The simulator is driven by the events read from standard input. Examples of possible events are given below. 
 - The first field will be the first character of the line, and subsequent fields will be separated by one of more spaces or tabs. 
 - The header of each field in the following examples does not appear in the input stream.
@@ -111,18 +111,16 @@ After processing all jobs, write the following to standard output (in this order
 - `average turnaround` time (where turnaround time is defined as completion time minus arrival time), and
 - `average job scheduling wait time` (where wait time is defined as the number of time units spent in the job scheduling queue).
 
-## Event Collisons
+### Event Collisons
 
 Often more than one event happen at the same time. Use the following rules to determine which events to process first:
 
-If an internal event (e.g., an event not on the input stream such as time slice expiration, I/O completion, or job termination) and an external event (i.e., an event given explicitly on the input stream) happen at the same time, process the internal event first.
-If a job is scheduled to come off the I/O wait queue at the same time a job is scheduled to come off the semaphore wait queue, take the job off the I/O wait queue first.
-Graphical View of the Simulator
+- If an internal event (e.g., an event not on the input stream such as time slice expiration, I/O completion, or job termination) and an external event (i.e., an event given explicitly on the input stream) happen at the same time, process the internal event first.
+- If a job is scheduled to come off the I/O wait queue at the same time a job is scheduled to come off the semaphore wait queue, take the job off the I/O wait queue first.
 
 
-Additional Requirements
+### Additional Requirements
 
-Your system must be developed and run on the cpssuse systems. Mutliple programming languages are available on these systems, including C (/usr/bin/gcc), C++ (/usr/bin/g++), Java (/usr/bin/javac, /usr/bin/java), Perl (/usr/bin/perl), and Python (/usr/bin/python). If the language you want to develop your simulator is absent from the system, let us know and we will try to get it installed.
 Your implementation must be distributed across more than one source code file, in some sensible manner which reflects the logical purpose of the various components of your design, to encourage problem decomposition and modular design.
 Include a README file in your submission which describes (i) the language you used to develop your program and (ii) the name of the compiler or interpreter which you used to compile or interpret your program.
 If you develop your simulator in a compiled language (e.g., C, C++, Java), you must provide a Makefile. Your Makefile must include target directives for every derived file produced during the compilation process (i.e., each program, each object file, and any other intermediate files produced during code compilation). Make sure that each directive also lists all files on which the derived file depends in its dependency list. Also, your Makefile must be written so carries out only the commands necessary to bring any produced file up-to-date. Your Makefile must do just enough, but no extra, work to bring the executable for your simulator up-to-date every time make is invoked. In addition, it must have an all directive and a clean directive to remove all generated files Use variables where appropriate in your Makefile to improve its readability. Your Makefile must bring everything up-to-date, without any warnings or errors, when make is invoked on our system.

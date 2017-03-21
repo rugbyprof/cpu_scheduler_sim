@@ -163,4 +163,4 @@ Often more than one event happen at the same time. Use the following rules to de
 
 >Note: Depending on how you order the jobs on your I/O wait queue, your dump of the jobs waiting for I/O may not match our output exactly, and for just that queue, that is acceptable. For instance, you might organize your I/O wait queue as a priority queue where the job which comes off first is at the head, or you might maintain jobs on the I/O wait queue in the order in which they are put on and then search for the job to take off when the I/O is complete.
 
-<sub>Source: http://academic.udayton.edu/SaverioPerugini/</sub>
+<sub>Source: Saverio Perugini http://academic.udayton.edu/SaverioPerugini/</sub>

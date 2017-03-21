@@ -1,6 +1,6 @@
 ## Cpu_Scheduling_Simulation_Project
 
-Design and implement a program (in python) that simulates some of the job scheduling, CPU scheduling, and semaphore processing of an operating system.
+Design and implement a program (in python) that simulates some of the job scheduling, CPU scheduling, and semaphore processing of an operating system. A large portion of the simulation is given to you already (if you choose to use it). An explanation of the code can be found [here](./components/README.md).
 
 ### New Jobs
 - When jobs initially arrive in the system, they are put on the `job scheduling queue` which is maintained in FIFO order. 

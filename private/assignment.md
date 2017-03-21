@@ -81,29 +81,37 @@ Design and implement a program (in python) that simulates some of the job schedu
 
 *Interpretation: the job currently running on the CPU performs a performs a signal on semaphore number 2 which may allow a job to re-enter the ready state.*
 
-Display the status of the simulator:
+**Display the status of the simulator:**
 
-Event Time
-D     214
-Interpretation: display the status of the simulator at time 214.
+|Event |Time |
+|------|-----|
+|D     |214  |
 
-You may assume that events appear on the input stream in ascending time order and no two events happen at the same time. However, realize that the events given in the input stream are not only events which your simulator must handle. For instance, a time quantum expiration is not an event given in the input stream, but it is an event which your simulator must handle. Furthermore, an internal event, such as a time quantum expiration, not in the input stream, may occur at the same time as an event in the input stream (e.g., a new job arrival). Events in the input stream are external events.
+*Interpretation: display the status of the simulator at time 214.*
 
-The following is a list of internal events (i.e., not given on the input stream) which your simulator must handle:
+- ***You may assume that events appear on the input stream in ascending time order and no two events happen at the same time.*** 
+- However, realize that the events given in the input stream are not only events which your simulator must handle. For instance, a time quantum expiration is not an event given in the input stream, but it is an event which your simulator must handle. 
+- Furthermore, an internal event, such as a time quantum expiration, not in the input stream, may occur at the same time as an event in the input stream (e.g., a new job arrival). Events in the input stream are external events.
 
-I/O completion (C)
-time quantum expiration (E)
-job termination (T)
-Assume that context switching, semaphore operations, and displays take no simulator time (an unrealistic assumption in a real operating system).
+- The following is a list of internal events (i.e., not given on the input stream) which your simulator must handle:
 
-When a display is requested, print the contents of all queues as well as the job currently running on the CPU to standard output using only the format used in the sample output given below.
+- I/O completion (C)
+- time quantum expiration (E)
+- job termination (T)
+
+- Assume that context switching, semaphore operations, and displays take no simulator time (an unrealistic assumption in a real operating system).
+
+### Status Display
+
+- When a display is requested, print the contents of all queues as well as the job currently running on the CPU to standard output using only the format used in the sample output given below.
 
 After processing all jobs, write the following to standard output (in this order, as shown on the sample output given below):
 
-completion time for each job (in order of completion),
-average turnaround time (where turnaround time is defined as completion time minus arrival time), and
-average job scheduling wait time (where wait time is defined as the number of time units spent in the job scheduling queue).
-Event Collisons
+- `completion time` for each job (in order of completion),
+- `average turnaround` time (where turnaround time is defined as completion time minus arrival time), and
+- `average job scheduling wait time` (where wait time is defined as the number of time units spent in the job scheduling queue).
+
+## Event Collisons
 
 Often more than one event happen at the same time. Use the following rules to determine which events to process first:
 

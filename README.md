@@ -141,10 +141,10 @@ Often more than one event happen at the same time. Use the following rules to de
 
 ### Test data: sample input and output streams
 
-- (processes only) [processes.txt](../input_data/processes.txt)
-- (only events A & D, & E & T) [jobs_in_a.txt](../input_data/jobs_in_a.txt) and [jobs_out_a.txt](../input_data/jobs_out_a.txt)
-- (only events A, I, & D, & E, C, & T) [jobs_in_b.txt](../input_data/jobs_in_b.txt) and [jobs_out_b.txt](../input_data/jobs_out_b.txt)
-- (all events: A, I, W, S, & D, & E, C, & T) [jobs_in_c.txt](../input_data/jobs_in_c.txt) and [jobs_out_c.txt](../input_data/jobs_out_c.txt)
+- (processes only) [processes.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/processes.txt)
+- (only events A & D, & E & T) [jobs_in_a.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_in_a.txt) and [jobs_out_a.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_out_a.txt)
+- (only events A, I, & D, & E, C, & T) [jobs_in_b.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_in_b.txt) and [jobs_out_b.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_out_b.txt)
+- (all events: A, I, W, S, & D, & E, C, & T) [jobs_in_c.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_in_c.txt) and [jobs_out_c.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_out_c.txt)
 
 Use the UNIX diff utility to compare your output to the correct output. For full credit, the output produced by your program must have zero differences, as defined by diff, with the output posted here.
 

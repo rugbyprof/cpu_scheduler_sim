@@ -25,29 +25,45 @@ Design and implement a program (in python) that simulates some of the job schedu
 - When a job from the first level is given access to the CPU, it is allowed a quantum of 100 time units. 
 - If it exceeds that time quantum, it is preempted and moves to the second level.
 
-The jobs on the second level may only be allocated the CPU if there are no jobs on the first level. When a job on the second level is given access to the CPU, it is allowed a quantum of 300 time units. If it exceeds that, it is preempted and put back on the second level of the ready queue.
+- The jobs on the second level may only be allocated the CPU if there are no jobs on the first level. 
+- When a job on the second level is given access to the CPU, it is allowed a quantum of 300 time units. 
+- If it exceeds that, it is preempted and put back on the second level of the ready queue.
 
-Process scheduling decisions are made whenever any process leaves the CPU for any reason (e.g., expiration of a quantum or job termination). When a job terminates, do job scheduling first, then process scheduling. Also, give preference to first level jobs (i.e., if a job from the second level of the ready queue is running, and a new job enters the first level, the running job is preempted to the second level in favor of the first level job).
+- Process scheduling decisions are made whenever any process leaves the CPU for any reason (e.g., expiration of a quantum or job termination). 
+- When a job terminates, do job scheduling first, then process scheduling. 
+- Also, give preference to first level jobs (i.e., *if a job from the second level of the ready queue is running, and a new job enters the first level, the running job is preempted to the second level in favor of the first level job*).
 
-While executing on the CPU, a job may require I/O, which preempts it to the I/O wait queue for the duration of its I/O burst.
+## IO Interrupts
+- While executing on the CPU, a job may require I/O, which preempts it to the `I/O wait queue` for the duration of its I/O burst.
 
-While executing on the CPU, a job may perform a semaphore operation. Assume there are five semaphores shared among all jobs running in the system, numbered 0 through 4, each initialized to 1. If a job must wait because of a semaphore, it goes onto the appropriate wait queue until it is signaled. There is a separate wait queue for each semaphore.
+## Critical Section
+- While executing on the CPU, a job may perform a semaphore operation. 
+- Assume there are five semaphores shared among all jobs running in the system, numbered 0 through 4, each initialized to 1. 
+- If a job must wait because of a semaphore, it goes onto the appropriate wait queue until it is signaled. 
+- There is a separate wait queue for each semaphore.
 
-When a job completes, put it on a finished list for later processing.
+- When a job completes, put it on a finished list for later processing.
 
-The simulator is driven by the events read from standard input. Examples of possible events are given below. The first field will be the first character of the line, and subsequent fields will be separated by one of more spaces or tabs. The header of each field in the following examples does not appear in the input stream.
+## Instructions / Events
+- The simulator is driven by the events read from standard input. Examples of possible events are given below. 
+- The first field will be the first character of the line, and subsequent fields will be separated by one of more spaces or tabs. 
+- The header of each field in the following examples does not appear in the input stream.
 
-A new job arrives:
+**A new job arrives:**
 
-Event Time Job Memory Run Time
-A     140  12  24     2720
-Interpretation: job 12 arrives at time 140, requires 24 blocks of memory and uses the CPU for a total of 2720 time units.
+|Event |Time |Job |Memory |Run Time|
+|------|-----|----|-------|--------|
+|A     |140  |12  |24     |2720    |
 
-A job needs to perform I/O:
+*Interpretation: job 12 arrives at time 140, requires 24 blocks of memory and uses the CPU for a total of 2720 time units.*
 
-Event Time I/O Burst Time
-I     214  85
-Interpretation: the job currently running on the CPU will not finish its quantum because at time 214 it needs to perform I/O for a duration of 85 time units.
+**A job needs to perform I/O:**
+
+|Event |Time |I/O Burst Time|
+|------|-----|--------------|
+|I     |214  |85           |
+
+*Interpretation: the job currently running on the CPU will not finish its quantum because at time 214 it needs to perform I/O for a duration of 85 time units.
 
 A job performs a wait on a semaphore:
 

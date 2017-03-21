@@ -156,8 +156,8 @@ Often more than one event happen at the same time. Use the following rules to de
 
 - 10% of your grade will be based on style and design.
 - If your program produces this jobs_out_c.txt exactly when run on jobs_in_c.txt <br> (all events: A, I, W, S, & D, & T, E, & C), you can earn up to 90 points.
-- If your program produces this jobs_out_b.txt exactly when run on jobs_in_b.txt (only events A, I, & D, & T, E, & C), you can only earn up to 65 points.
-- If your program produces this jobs_out_a.txt exactly when run on jobs_in_a.txt (only events A & D, & T & E), you can only earn up to 40 points.
+- If your program produces this jobs_out_b.txt exactly when run on jobs_in_b.txt <br> (only events A, I, & D, & T, E, & C), you can only earn up to 65 points.
+- If your program produces this jobs_out_a.txt exactly when run on jobs_in_a.txt <br> (only events A & D, & T & E), you can only earn up to 40 points.
 - If your program does not produce this jobs_out_a.txt exactly when run on jobs_in_a.txt, you will not earn any points.
 - If your program does not compile or execute without errors or warnings, you will not earn any points.
 

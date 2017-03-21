@@ -63,19 +63,23 @@ Design and implement a program (in python) that simulates some of the job schedu
 |------|-----|--------------|
 |I     |214  |85           |
 
-*Interpretation: the job currently running on the CPU will not finish its quantum because at time 214 it needs to perform I/O for a duration of 85 time units.
+*Interpretation: the job currently running on the CPU will not finish its quantum because at time 214 it needs to perform I/O for a duration of 85 time units.*
 
-A job performs a wait on a semaphore:
+**A job performs a wait on a semaphore:**
 
-Event Time Semaphore
-W     550  2
-Interpretation: the job currently running on the CPU performs a wait on semaphore number 2 which may or may not cause it to be preempted. Initialize each semaphore to 1.
+|Event |Time |Semaphore|
+|------|-----|--------------|
+|W     |550  |2           |
 
-A job performs a signal on a semaphore:
+*Interpretation: the job currently running on the CPU performs a wait on semaphore number 2 which may or may not cause it to be preempted. Initialize each semaphore to 1.*
 
-Event Time Semaphore
-S     622  2
-Interpretation: the job currently running on the CPU performs a performs a signal on semaphore number 2 which may allow a job to re-enter the ready state.
+**A job performs a signal on a semaphore:**
+
+|Event |Time |Semaphore|
+|------|-----|--------------|
+|S     |622  |2           |
+
+*Interpretation: the job currently running on the CPU performs a performs a signal on semaphore number 2 which may allow a job to re-enter the ready state.*
 
 Display the status of the simulator:
 

@@ -12,8 +12,8 @@ Design and implement a program (in python) that simulates some of the job schedu
 
 ### Memory
 - A job can only run if it requires less than or equal to the system's main memory capacity. 
-- The system has a total of 512 blocks of usable memory. 
-- If a new job arrives needing more than 512 blocks, it is rejected by the system with an appropriate error message. 
+- The system has a total of **512** blocks of usable memory. 
+- If a new job arrives needing more than **512** blocks, it is rejected by the system with an appropriate error message. 
 - Rejected jobs do not factor into the final statistics (described below).
 
 ***Note that all jobs in the ready state must fit into available main memory.***
@@ -121,25 +121,31 @@ Often more than one event happen at the same time. Use the following rules to de
 
 ### Additional Requirements
 
-Your implementation must be distributed across more than one source code file, in some sensible manner which reflects the logical purpose of the various components of your design, to encourage problem decomposition and modular design.
-Include a README file in your submission which describes (i) the language you used to develop your program and (ii) the name of the compiler or interpreter which you used to compile or interpret your program.
-If you develop your simulator in a compiled language (e.g., C, C++, Java), you must provide a Makefile. Your Makefile must include target directives for every derived file produced during the compilation process (i.e., each program, each object file, and any other intermediate files produced during code compilation). Make sure that each directive also lists all files on which the derived file depends in its dependency list. Also, your Makefile must be written so carries out only the commands necessary to bring any produced file up-to-date. Your Makefile must do just enough, but no extra, work to bring the executable for your simulator up-to-date every time make is invoked. In addition, it must have an all directive and a clean directive to remove all generated files Use variables where appropriate in your Makefile to improve its readability. Your Makefile must bring everything up-to-date, without any warnings or errors, when make is invoked on our system.
-Hints and notes
+- Your implementation must be distributed across more than one source code file, in some sensible manner which reflects the logical purpose of the various components of your design, to encourage problem decomposition and modular design. This is mostly done for you if you use the starter code, however you must use OOP concepts with any additional code you add. 
+- Include a README file in your submission which contains:
+    - Team Information
+        - The team members names.
+        - Which additional code is attributed to each team member.
+        - Time each team member spent working on project. 
+    - Files in project
+        - A list showing the file structure of your code and which files are included in your project.
+        
+## Hints and notes
 
-You are advised to define a PCB (process control block) structure and use it as a node in the various queues of your simulator.
-When debugging your simulator, you are advised to add extra display events to the sample input to trace the movement of jobs throughout the various queues of the system.
-You are advised to organize jobs on the I/O wait queue in the order in which they are scheduled to come off (i.e., make the I/O queue a priority queue) to obviate having to search the queue for the next job to come off of it everytime an I/O operation completes.
-You are advised to organize jobs on each of the 5 semaphore wait queues in FIFO order.
-Since this program involves so many queues (I count 10), you are advised to use a programming language which has list operations built into the language, such as Python, or one which provides a queue data structure in a standard library, such as Java or C++. You are advised against re-inventing the wheel. You are also advised against using this project as an opportunity to learn a new language. Use tools with which you are already familiar and focus on the operating systems aspects of the project.
-If designed properly, the program required to solve this project should occupy no more than 1,000 lines of code (or less if you use built-in data structures or data structures from libraries).
-Test data: sample input and output streams
+- I created a class for many of the components of the simulation. You should continue with by coding with a modular based design. 
+- When debugging your simulator, you are advised to add extra display events to the sample input to trace the movement of jobs throughout the various queues of the system.
+- You are advised to organize jobs on the I/O wait queue in the order in which they are scheduled to come off (i.e., make the I/O queue a priority queue) to obviate having to search the queue for the next job to come off of it everytime an I/O operation completes.
+- You are advised to organize jobs on each of the 5 semaphore wait queues in FIFO order.
+- If designed properly, the program required to solve this project should occupy no more than 1,000 lines of code (or less if you use built-in data structures or data structures from libraries).
 
-(only events A & D, & E & T) jobs_in_a.txt and jobs_out_a.txt [image]
-(only events A, I, & D, & E, C, & T) p2stdin_b and p2stdout_b [image]
-(all events: A, I, W, S, & D, & E, C, & T) p2stdin_c and p2stdout_c [image]
-This test data is available at /home/perugini_cps346/share/projects/p2/. At first, simply try to get only one job through your system. Once you are confident that your system processes only one job properly, try to get two jobs through the system.
 
-While developing your simulator, you are encouraged to get it to work on the simple test input first (p2d.dat) and progressively enhance and refine your system to the point where it works on the most complex test input (p2a.dat).
+### Test data: sample input and output streams
+
+- (processes only) [processes.txt](../input_data/processes.txt)
+- (only events A & D, & E & T) [jobs_in_a.txt](../input_data/jobs_in_a.txt) and [jobs_out_a.txt](../input_data/jobs_out_a.txt)
+- (only events A, I, & D, & E, C, & T) [jobs_in_b.txt](../input_data/jobs_in_b.txt) and [jobs_out_b.txt](../input_data/jobs_out_b.txt)
+- (all events: A, I, W, S, & D, & E, C, & T) [jobs_in_c.txt](../input_data/jobs_in_c.txt) and [jobs_out_c.txt](../input_data/jobs_out_c.txt)
+
 Use the UNIX diff utility to compare your output to the correct output. For full credit, the output produced by your program must have zero differences, as defined by diff, with the output posted here.
 
 There is also a reference executable of a solution for this project available at /home/perugini_cps346/share/projects/p2/OSsim.

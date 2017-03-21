@@ -1,15 +1,29 @@
- Problem
+## Problem
 
-(100 points) Design and implement a program (in any language) that simulates some of the job scheduling, CPU scheduling, and semaphore processing of an operating system.
-Detailed Description and Requirements
+Design and implement a program (in python) that simulates some of the job scheduling, CPU scheduling, and semaphore processing of an operating system.
 
-When jobs initially arrive in the system, they are put on the job scheduling queue which is maintained in FIFO order. The job scheduling algorithm is run when a job arrives or terminates. Job scheduling allows as many jobs to enter the ready state as possible given the following restriction: a job cannot enter the ready state if there is not enough free memory to accommodate that job's memory requirement. Do not start a job unless it is the first job on the job scheduling queue. When a job terminates, its memory is released, which may allow one or more waiting jobs to enter the ready state.
+### New Jobs
+- When jobs initially arrive in the system, they are put on the `job scheduling queue` which is maintained in FIFO order. 
+- The `job scheduling algorithm` is run when a job arrives or terminates. 
+- Job scheduling allows as many jobs to enter the ready state as possible given the following restriction: 
+    - a job cannot enter the ready state if there is not enough free memory to accommodate that job's memory requirement. 
+- Do not start a job unless it is the first job on the job scheduling queue. 
+- When a job terminates, its memory is released, which may allow one or more waiting jobs to enter the ready state.
 
-A job can only run if it requires less than or equal to the system's main memory capacity. The system has a total of 512 blocks of usable memory. If a new job arrives needing more than 512 blocks, it is rejected by the system with an appropriate error message. Rejected jobs do not factor into the final statistics (described below).
+### Memory
+- A job can only run if it requires less than or equal to the system's main memory capacity. 
+- The system has a total of 512 blocks of usable memory. 
+- If a new job arrives needing more than 512 blocks, it is rejected by the system with an appropriate error message. 
+- Rejected jobs do not factor into the final statistics (described below).
 
-Note that all jobs in the ready state must fit into available main memory.
+***Note that all jobs in the ready state must fit into available main memory.***
 
-Process scheduling is managed as a multilevel feedback queue. The queue has two levels, each queue is organized as a FIFO, and both use a round robin scheduling technique. New jobs are put on the first level when arriving in the ready state. When a job from the first level is given access to the CPU, it is allowed a quantum of 100 time units. If it exceeds that time quantum, it is preempted and moves to the second level.
+### Process Scheduling
+- Process scheduling is managed as a `multilevel feedback queue`. 
+- The queue has two levels, each queue is organized as a `FIFO`, and both use a `round robin` scheduling technique. 
+- New jobs are put on the first level when arriving in the ready state. 
+- When a job from the first level is given access to the CPU, it is allowed a quantum of 100 time units. 
+- If it exceeds that time quantum, it is preempted and moves to the second level.
 
 The jobs on the second level may only be allocated the CPU if there are no jobs on the first level. When a job on the second level is given access to the CPU, it is allowed a quantum of 300 time units. If it exceeds that, it is preempted and put back on the second level of the ready queue.
 

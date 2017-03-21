@@ -38,7 +38,7 @@ class Process(object):
         Params: (dict)
             kwargs should contain everyting it the attributes list above.
         """
-
+        print(kwargs)
         # Either pid or process_id need be present in kwargs otherwise, error
         if 'process_id' not in kwargs and 'pid' not in kwargs:
             raise Exception("Need a process id to initialize a process!")
@@ -105,7 +105,7 @@ class Process(object):
 def test_process_class():
     """Run tests for Process class.
     """
-    processes = load_process_file(os.path.dirname(os.path.realpath(__file__))+'/../input_data/cpu_sim_input.txt')
+    processes = load_process_file(os.path.dirname(os.path.realpath(__file__))+'/../input_data/processes.txt')
     for i in range(len(processes)):
         processes[i] = Process(**processes[i])
 

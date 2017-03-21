@@ -103,7 +103,7 @@ from accounting import SystemAccounting
 from process import Process
 from clock import Clock
 from cpu import Cpu
-from fcfs import Fcfs
+from fifo import Fifo
 from memory import Memory
 from semaphore import Semaphore
 from semaphore import SemaphorePool

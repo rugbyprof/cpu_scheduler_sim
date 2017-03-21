@@ -89,7 +89,8 @@ class Cpu(object):
 def test_cpu_class():
     # Read in a bunch of process data from our test file
 
-    processes = load_process_file(os.path.dirname(os.path.realpath(__file__))+'/../input_data/cpu_sim_input.txt')
+    processes = load_process_file(os.path.dirname(os.path.realpath(__file__))+'/../input_data/processes.txt')
+
     for i in range(len(processes)):
         processes[i] = Process(**processes[i])
     

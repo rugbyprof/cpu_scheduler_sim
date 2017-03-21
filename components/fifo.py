@@ -6,7 +6,7 @@ from sim_components import *
 
 # === Class: FCFS===
 
-class Fcfs(list):
+class Fifo(list):
     def __init__(self,init=[]):
         """***init***: Constructor for FCFS class.
 

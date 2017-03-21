@@ -150,26 +150,17 @@ Use the UNIX diff utility to compare your output to the correct output. For full
 
 There is also a reference executable of a solution for this project available at /home/perugini_cps346/share/projects/p2/OSsim.
 
-How to submit
+## Deliverables
 
-Note: All directory and filenames below are case-sensitive. You must use the directory and filenames exactly as shown below, (i.e., all lower case).
+- TBD
 
-Prepare your submission file as /home/<logname>/projects/p2/p2.tar. This archive must contain only the most minimal set of files necessary to build your simulator from scratch. Only the file /home/<logname>/projects/p2/p2.tar will be electronically collected from your account on the deadline.
+## Evaluation
 
-Failure to follow these submission requirements will result in a 10% penalty.
+- 10% of your grade will be based on style and design.
+- If your program produces this jobs_out_c.txt exactly when run on jobs_in_c.txt (all events: A, I, W, S, & D, & T, E, & C), you can earn up to 90 points.
+- If your program produces this jobs_out_b.txt exactly when run on jobs_in_b.txt (only events A, I, & D, & T, E, & C), you can only earn up to 65 points.
+- If your program produces this jobs_out_a.txt exactly when run on jobs_in_a.txt (only events A & D, & T & E), you can only earn up to 40 points.
+- If your program does not produce this jobs_out_a.txt exactly when run on jobs_in_a.txt, you will not earn any points.
+- If your program does not compile or execute without errors or warnings, you will not earn any points.
 
-Evaluation
-
-Ninety percent of your score will come from correctness and 10% of your score will come from following our programming style guide. Applicable submission penalties will then be applied.
-
-In an effort to award partial credit to students who are unable to complete certains parts of this project, students earn up to four different portions of the 90 possible points for correctness:
-If your program produces this p2stdout_c exactly when run on p2stdin_c (all events: A, I, W, S, & D, & T, E, & C), you can earn up to 90 points.
-If your program produces this p2stdout_b exactly when run on p2stdin_b (only events A, I, & D, & T, E, & C), you can only earn up to 65 points.
-If your program produces this p2stdout_a exactly when run on p2stdin_a (only events A & D, & T & E), you can only earn up to 40 points.
-If your program does not produce this p2stdout_a exactly when run on p2stdin_a, you will not earn any points.
-If your program does not compile or execute without errors or warnings, you will not earn any points.
-Note: Depending on how you order the jobs on your I/O wait queue, your dump of the jobs waiting for I/O may not match our output exactly, and for just that queue, that is acceptable. For instance, you might organize your I/O wait queue as a priority queue where the job which comes off first is at the head, or you might maintain jobs on the I/O wait queue in the order in which they are put on and then search for the job to take off when the I/O is complete.
-
-Return Home
-Window size: x 
-Viewport size: x
+>Note: Depending on how you order the jobs on your I/O wait queue, your dump of the jobs waiting for I/O may not match our output exactly, and for just that queue, that is acceptable. For instance, you might organize your I/O wait queue as a priority queue where the job which comes off first is at the head, or you might maintain jobs on the I/O wait queue in the order in which they are put on and then search for the job to take off when the I/O is complete.

@@ -210,8 +210,8 @@ def run_tests():
 
 if __name__ == '__main__':
 
-    file_name1 = os.path.dirname(os.path.realpath(__file__))+'/input_data/p2stdin_c.txt'
-    file_name2 = os.path.dirname(os.path.realpath(__file__))+'/input_data/cpu_sim_input.txt'
+    file_name1 = os.path.dirname(os.path.realpath(__file__))+'/input_data/jobs_in_c.txt'
+    file_name2 = os.path.dirname(os.path.realpath(__file__))+'/input_data/jobs_in_test.txt'
     S = Simulator(input_file=file_name1)
 
 

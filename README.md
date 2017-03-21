@@ -146,9 +146,7 @@ Often more than one event happen at the same time. Use the following rules to de
 - (only events A, I, & D, & E, C, & T) [jobs_in_b.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_in_b.txt) and [jobs_out_b.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_out_b.txt)
 - (all events: A, I, W, S, & D, & E, C, & T) [jobs_in_c.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_in_c.txt) and [jobs_out_c.txt](https://github.com/rugbyprof/cpu_scheduler_sim/blob/master/input_data/jobs_out_c.txt)
 
-Use the UNIX diff utility to compare your output to the correct output. For full credit, the output produced by your program must have zero differences, as defined by diff, with the output posted here.
-
-There is also a reference executable of a solution for this project available at /home/perugini_cps346/share/projects/p2/OSsim.
+- Use the UNIX diff utility to compare your output to the correct output. For full credit, the output produced by your program must have zero differences, as defined by diff, with the output posted here.
 
 ## Deliverables
 
@@ -164,3 +162,5 @@ There is also a reference executable of a solution for this project available at
 - If your program does not compile or execute without errors or warnings, you will not earn any points.
 
 >Note: Depending on how you order the jobs on your I/O wait queue, your dump of the jobs waiting for I/O may not match our output exactly, and for just that queue, that is acceptable. For instance, you might organize your I/O wait queue as a priority queue where the job which comes off first is at the head, or you might maintain jobs on the I/O wait queue in the order in which they are put on and then search for the job to take off when the I/O is complete.
+
+<sub>Source: http://academic.udayton.edu/SaverioPerugini/</sub>

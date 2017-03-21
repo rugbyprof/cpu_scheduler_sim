@@ -134,7 +134,7 @@ Since this program involves so many queues (I count 10), you are advised to use 
 If designed properly, the program required to solve this project should occupy no more than 1,000 lines of code (or less if you use built-in data structures or data structures from libraries).
 Test data: sample input and output streams
 
-(only events A & D, & E & T) p2stdin_a and p2stdout_a [image]
+(only events A & D, & E & T) jobs_in_a.txt and jobs_out_a.txt [image]
 (only events A, I, & D, & E, C, & T) p2stdin_b and p2stdout_b [image]
 (all events: A, I, W, S, & D, & E, C, & T) p2stdin_c and p2stdout_c [image]
 This test data is available at /home/perugini_cps346/share/projects/p2/. At first, simply try to get only one job through your system. Once you are confident that your system processes only one job properly, try to get two jobs through the system.

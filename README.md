@@ -1,4 +1,4 @@
-## Problem
+## Cpu_Scheduling_Simulation_Project
 
 Design and implement a program (in python) that simulates some of the job scheduling, CPU scheduling, and semaphore processing of an operating system.
 
